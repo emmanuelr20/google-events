@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', Helvetica, Arial, sans-serif;
+    margin-bottom: 5px;
+    color: #363636;
+}
+
+p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.container {
+    margin: 0 auto;
+    position: relative;
+    width: 90%;
+}
+
+@media screen and (min-width: 1088px) {
+    .container {
+        width: 75%;
+    }
+}
+
+.m-10 {
+    margin: 10px;
+}
+
+.mb-25 {
+    margin-bottom: 25px;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+}
+  
+.card {
+    background-color: white;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    color: #4a4a4a;
+    padding: 20px;
+}
+
+.item {
+    padding: 5px 10px;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    background: #f4f4f4;
+}
+
+.item > p {
+    margin-bottom: 0px;
+}
+
+.button {
+    background-color: white;
+    border-color: #dbdbdb;
+    border-width: 1px;
+    color: #363636;
+    cursor: pointer;
+    font-weight: 500;
+    justify-content: center;
+    padding: 0.35rem 0.75rem;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.input,
+.textarea {
+  background-color: white;
+  border-color: #dbdbdb;
+  color: #363636;
+  box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+  max-width: 100%;
+  width: 100%;
+  border-width: 1px;
+  padding: 0.2rem;
+  margin-bottom: 10px
+}
+
+label {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.attendees {
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+#error-content, .error-content {
+    padding: 20px;
+    background: rgb(182, 0, 0);
+    color: white;
+    font-size: 12px;
+}
+
+.is-success{
+    background: green;
+    color: white;
+}
+
+.is-danger{
+    background: rgb(182, 0, 0);
+    color: white;
+}
+
+.is-warning{
+    background: rgba(202, 88, 0, 0.892);
+    color: white;
+}
+
+.is-link{
+    background: rgb(0, 97, 187);
+    color: white;
+}
+.is-info{
+    background: darkblue;
+    color: white;
+}
+
+.has-text-info {
+    color: darkblue;
+}
+
+.has-text-success {
+    color: green;
+}
+
+.has-text-danger {
+    color: red;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.event-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    position: fixed;
+    z-index: 40;
+    display: flex;
+    background-color: rgba(10, 10, 10, 0.86);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin-bottom: 0;
+    padding: 10px;
+}
+
+.modal-card {
+    padding: 5px;
+    max-height: calc(100vh - 40px);
+    overflow: auto;
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+}
