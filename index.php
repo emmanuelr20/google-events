@@ -46,7 +46,7 @@
             <h4 class="title">Upcomming Events</h4>
             <hr>
             <div id="events-list">
-
+ 
             </div>
         </div>
         <div id="modal-wrapper"></div>
