@@ -169,8 +169,9 @@ function listUpcomingEvents() {
     'timeMin': (new Date()).toISOString(),
     'showDeleted': false,
     'singleEvents': true,
-    'maxResults': 10,
-    'orderBy': 'startTime'
+    'maxResults': 20,
+    'orderBy': 'startTime',
+    'timeMin': (new Date()).toISODateString()
   }).then(function(response) {
     events = response.result.items;
     addEvents(events);
@@ -462,4 +463,15 @@ Date.prototype.toDatetimeLocal = function toDatetimeLocal() {
     ;
     return YYYY + '-' + MM + '-' + DD + 'T' +
              HH + ':' + II + ':' + SS;
+};
+
+Date.prototype.toISODateString = function ISODateString(){
+  function pad(n){return n<10 ? '0'+n : n}
+  var d = this;
+  return d.getUTCFullYear()+'-'
+       + pad(d.getUTCMonth()+1)+'-'
+       + pad(d.getUTCDate())+'T'
+       + pad(d.getUTCHours())+':'
+       + pad(d.getUTCMinutes())+':'
+       + pad(d.getUTCSeconds())+'Z'
 };
