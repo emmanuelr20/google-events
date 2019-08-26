@@ -419,7 +419,7 @@ function dismissEditModal() {
 
 function showEditModal(event) {
   var attendees = '';
-  event.attendees.map(function(item){
+  event.attendees && event.attendees.map(function(item){
     attendees += item.email + ', ';
   })
   attendees = attendees.substring(0, attendees.length - 2);
