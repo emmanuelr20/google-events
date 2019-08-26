@@ -132,7 +132,7 @@ function renderEvent(event, top) {
   var status = event.attendees ? event.attendees.filter(function(user){
     return user.email === userMail;
   }): event.attendees;
-  status.length ? status = status[0]: status = null;
+  status && status.length ? status = status[0]: status = null;
 
   var html = "<div class='card mb-25' id='event-div-" + event.id + "' ><p><strong>Title: </strong>" + event.summary + ((event.creator.email === userMail) ? " <small>(creator)</small>" : "") + "</p>";
   html += "<p><strong>Location: </strong>" + event.location + "</p>";
