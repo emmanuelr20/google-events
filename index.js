@@ -141,7 +141,7 @@ function renderEvent(event, top) {
   html += "<p><strong>Description: </strong>" + event.description + "</p>";
   if (status) html += "<p><strong>Acceptance Status: </strong>" + status.responseStatus + "</p>";
   html += "<div class='attendees card mb-15'><p><strong>Attendees: </strong></p>";
-  event.attendees.map(function (user) {
+  event.attendees ?? event.attendees.map(function (user) {
     html += "<div class='item'><p style='clear: both'>" + user.email + ": <span class='has-text-info'>(" + user.responseStatus + ")</span></p>";
     if (user.comment) html += "<small style='font-size: 12px'><strong>User Comment:</strong>" + user.comment + "</small>";
     html += "</div>";
